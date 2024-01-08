@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gbp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RestaurantActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:id="@+id/r_top_img"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/r_top_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Al Jassem Restaurant"
+            android:textSize="26sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="16dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/r_top_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:text="Open now"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@color/light_golden"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/golden"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:src="@drawable/w3"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Delivery by Robot"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:text="FREE"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progress_bar2"
+        android:layout_gravity="center"
+        gbp:type="nexus_rotation_cross"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="16dp">
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/rc_food"/>
+    </LinearLayout>
+</LinearLayout>
